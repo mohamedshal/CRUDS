@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="./node_modules//bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="w-75 mx-auto my-5">
+        <div class="form-group">
+            <label for="product-name">Product name: </label>
+            <input class="my-2 form-control" type="text" id="product-name">
+            <div class="alert alert-danger d-none" role="alert">
+                product should start with uppercase and min 3 characters
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="price">Product price: </label>
+            <input class="my-2 form-control" type="number" id="price">
+            <div class="alert alert-danger d-none" role="alert">
+                price should be less than 10000 and more than 0
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="category">Product category: </label>
+            <input class="my-2 form-control" type="text" id="category">
+            <div class="alert alert-danger d-none" role="alert">
+                category should be from 3 to 6 characters
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description">Product description: </label>
+            <textarea class="my-2 form-control" type="text" id="description"></textarea>
+            <div class="alert alert-danger d-none" role="alert">
+                Should not be empty!
+            </div>
+        </div>
+        <button class="my-3 btn btn-outline-info" id="submit-btn">Add Product</button>
+        <div class="form-group">
+            <label for="search">Search Here: </label>
+            <input class="my-2 form-control" type="text" id="search" />
+        </div>
+    </div>
+    <div class="w-75 mx-auto my-5">
+        <table class="table">
+            <thead>
+                <th>Index</th>
+                <th>ProductName</th>
+                <th>ProductPrice</th>
+                <th>ProductCategory</th>
+                <th>ProductDescription</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="products-list"></tbody>
+        </table>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
